@@ -108,6 +108,7 @@ const createSlide = (describe, avatar, name, info) => {
   const slideInfo = newSlide.querySelector('.trust__info');
   slideDescribe.textContent = describe;
   slideAvatar.src = avatar;
+  slideAvatar.alt = name;
   slideName.textContent = name;
   slideInfo.textContent = info;
   return newSlide;
