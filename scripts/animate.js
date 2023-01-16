@@ -24,23 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const oneWalletTitle = document.querySelector('.one-wallet__title');
 
+  let scroll = window.scrollY;
+  let heroCenter = hero.offsetHeight / 10;
+  let chooseBlock = choose.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let partnersBlock = partners.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let cryptoBlock = cryptoText.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let cryptoCoins = cryptoInfo.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let beyondBlock = beyondComposition.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let beyondItems = beyondFeatures.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let standOutBlock = standOutBenefits.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let standOutBottom = standOutButtons.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let standOutEducationBlock = standOutEducation.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let trustBlock = trust.getBoundingClientRect().top - document.documentElement.clientHeight;
+  let oneWalletBlock = oneWalletTitle.getBoundingClientRect().top - document.documentElement.clientHeight;
+
   window.addEventListener('scroll', () => {
-
-    let scroll = window.scrollY;
-
-    let heroCenter = hero.offsetHeight / 10;
-    let chooseBlock = choose.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let partnersBlock = partners.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let cryptoBlock = cryptoText.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let cryptoCoins = cryptoInfo.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let beyondBlock = beyondComposition.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let beyondItems = beyondFeatures.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let standOutBlock = standOutBenefits.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let standOutBottom = standOutButtons.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let standOutEducationBlock = standOutEducation.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let trustBlock = trust.getBoundingClientRect().top - document.documentElement.clientHeight;
-    let oneWalletBlock = oneWalletTitle.getBoundingClientRect().top - document.documentElement.clientHeight;
-
     (scroll >= heroCenter) 
       ? header.classList.add('header__on-scroll')
       : header.classList.remove('header__on-scroll');
